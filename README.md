@@ -1,4 +1,4 @@
-# ![Expense Tracker Banner](https://via.placeholder.com/1200x350?text=Expense+Tracker+💰)
+# ![Expense Tracker Banner]
 
 <p align="center">
   <b>A simple & powerful expense tracking web app</b>  
@@ -86,18 +86,6 @@ expense-tracker/
 ├── style.css        # Styling file
 └── script.js        # JavaScript functionality
 ```
-
----
-
-## 📸 **Screenshots**
-
-| Dashboard                                                    | Analytics View                                            |
-| ------------------------------------------------------------ | --------------------------------------------------------- |
-| ![Dashboard Screenshot](https://via.placeholder.com/400x250) | ![Charts Screenshot](https://via.placeholder.com/400x250) |
-
-*(Replace placeholders with real screenshots later.)*
-
----
 
 ## 🌍 **Deployment**
 
