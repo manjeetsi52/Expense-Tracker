@@ -1,4 +1,4 @@
- <h1>Expense Tracker Banner</h1>
+ <h1 align='center'>Expense Tracker</h1>
 
 <p align="center">
   <b>A simple & powerful expense tracking web app</b>  
