@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+        <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+        <!-- Header and Navigation -->
+      <header>
+        <div class="container">
+          <nav class="navbar">
+            <h1 class="logo"><a href="">&euro; Tracker</a></h1>
+            <ul class="navbar-items">
+              <button class="header-close-btn"><i class="fa-solid fa-xmark"></i></button>
+              <li><a href="#">Home</a></li>
+              <li><a href="#form-page">Add</a></li>
+              <li><a href="#summary">Summary</a></li>
+              <li><a href="#data-page">Data</a></li>
+            </ul>
+            <button class="header-open-btn"><i class="fa-solid fa-bars"></i></button>
+          </nav>
+        </div>
+      </header>
+      <!-- Budget Page -->
+      <section class="budget-parent">
+            <div class="budget-child">
+                <div class="budget-info box-styling">
+                    <div class="balance box-styling">
+                        <h2>Balance</h2>
+                        <p class="balance-amount"> &#8377; 2500.00</p>
+                    </div>
+                    <div class="income-expense box-styling">
+                        <div class="income">
+                            <h2>Income</h2>
+                            <p class="income-amount"> &#8377; 4500.00</p>
+                        </div>
+                        <div class="expense">
+                             <h2>Expenses</h2>
+                            <p class="expense-amount"> &#8377; 2250.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="transaction box-styling">
+                        <div class="transactions">
+                            <h2>Transactions</h2>
+                              <select name="category" id="category" placeholder="Filter">
+                               <!-- <option value="" disabled selected>Filter</option> -->
+                               <option value="All">All</option>
+                                <option value="food">Food</option>
+                                <option value="salary">Salary</option>
+                                <option value="bill">Bill</option>
+                                <option value="uber">Uber</option>
+                                <option value="rent">Rent</option>
+                                <option value="petrol">Petrol</option>
+                                <option value="groceries">Groceries</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="search">
+                          <button class="search-icon" type="button" ><i class="fa-solid fa-magnifying-glass icon"></i></button>
+                          <input id="search" placeholder="search title or category...">
+                        </div>
+
+                        <div class="display-transactions">
+                            <ul class="parent-li">
+                                <li class="list-item">
+                                  <div class="li-div">
+
+                                    <div class="categ">
+                                        <div class="categ-icon"> <i class="fa-solid fa-bowl-food"></i> </div>
+                                        <div class="categ-info">
+                                          <h2 id="categ-title">Coffee</h2>
+                                          <p id="categ-category">Food</p>
+                                        </div>
+                                        <!-- <div class="categ-date-div">
+                                            <p class="categ-date">
+                                              24 Aug Wed
+                                            </p>
+                                        </div> -->
+                                    </div>
+
+                                    <div class="money-spend-receive">
+                                      <p class="money-spend-receive-value">
+                                       <span class="sign">-</span>$<span class="value">500000</span>
+                                      </p>
+                                    </div>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                        </div>
+                </div>
+            </div>
+      </section>
+
+      <!-- Form Page -->
+ <section class="form-page" id="form-page">
+  <div class="form-parent-div">
+    <div class="form-div box-styling">
+      <form action="" class="form">
+        <h1>Add Expense</h1>
+
+        <!-- Title -->
+         <div class="title">
+           <label for="title" class="label">Title</label>
+          <input type="text" name="title" id="title" class="input" placeholder="Expense Title" required>
+
+         </div>
+        
+        <!-- Amount & Category -->
+        <div class="amount-category">
+          <div class="amount flex">
+            <label for="amount" class="label">Amount</label>
+            <input type="number" name="amount" id="amount" class="input"  placeholder="Enter Amount" required min="0" >
+          </div>
+
+          <div class="category flex">
+            <label for="category" class="label">Category</label>
+            <select name="category" id="category" class="input" required>
+              <option value="" disabled selected>Select Category</option>
+              <option value="food">Food</option>
+              <option value="salary">Salary</option>
+              <option value="bill">Bill</option>
+              <option value="uber">Uber</option>
+              <option value="rent">Rent</option>
+              <option value="petrol">Petrol</option>
+              <option value="groceries">Groceries</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Date & Payment -->
+        <div class="date-payment">
+          <div class="date flex">
+            <label for="date" class="label">Date</label>
+            <input type="date" id="date" name="date" required class="input" placeholder="Select Date">
+          </div>
+
+          <div class="payment">
+            <label for="payment" class="label">Payment Mode</label>
+            <select id="payment" name="payment" class="flex input" required>
+              <option value="" disabled selected>Select Payment Method</option>
+              <option value="cash">Cash</option>
+              <option value="creditCard">Credit Card</option>
+              <option value="debitCard">Debit Card</option>
+              <option value="upi">UPI</option>
+              <option value="salary">Salary</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Notes -->
+        <div class="notes flex" >
+          <label for="notes" class="label">Notes</label>
+          <textarea name="notes" id="notes" placeholder="Add Optional Notes" class="input" rows="2" cols="4"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button class="submit-btn" type="submit">Add Expense</button>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- chart Page -->
+
+<section class="summary" id="summary">
+  <div class="summary-parent">
+    <div class="summary-child box-styling">
+      <div class="chart box-styling">
+         <canvas id="myChart"></canvas>
+    </div>
+    <!-- todos -->
+    <div class="super ">
+      <div class="parent">
+        <h1>TODOS</h1>
+        <div class="todo-input-holder">
+          <input type="text" class="inputField input" id="inputTodo" placeholder="type here..." />
+          <button class="addToList todo-btn" id="addToList">Add</button>
+        </div>
+        <div class="todo-container"> 
+          <!-- <li class="todo-li">
+            <p>hello</p>
+            <button class="deleteBtn">Delete</button>
+          </li> -->
+        </div>
+      </div>
+    </div>
+
+</div>
+    </div>
+
+  </div>
+</section>
+<!-- Data Page -->
+<section class="data-page" id="data-page">
+  <div class="data-page-parent">
+    <div class="data-page-child box-styling">
+      <h2 >All Transactions</h2>
+      <div class="table-parent">
+      <table id="myTable" class="display">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Payment</th>
+            <th>Date</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Dynamic rows will be added here -->
+           <!-- <tr>
+            <td>Coffee</td>
+            <td>Food</td>
+            <td>-200</td>
+            <td>upi</td>
+            <td>24-10-2025</td>
+            <td>Notes</td>
+           </tr> -->
+        </tbody>
+      </table>
+     </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
